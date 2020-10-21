@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: url(./images/2030340.jpg);
+    background-size: cover;
+    display:flex;
+    justify-content: center;/*X轴居中*/
+    align-items: center;/*Y轴居中*/
+}
+/* .wrapper{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+} */
+
+.wrapper{
+    width:850;
+    display: flex;
+}
+
+
+.speed{
+    background-color: #fff;
+    flex:1;
+    margin: 10px;
+    border-radius: 50px;
+    /* text-align: center; */
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.speed-bar{
+    flex: 1;
+    height: 16.3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-170deg,#2376ae 0%,#c16ecf 100%);
+    color: #fff;
+    cursor: pointer;
+}
+
