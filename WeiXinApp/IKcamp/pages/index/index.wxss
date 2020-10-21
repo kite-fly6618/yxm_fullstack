@@ -1,0 +1,22 @@
+/* pages/index/index.wxss */
+.group-bar{
+  text-align: center;
+}
+.group-title{
+  display: inline-block;
+}
+.group-content-item{
+  display: flex;
+  margin-top: 30rpx;
+  width: 100%;
+  height: 250rpx;
+}
+.group-content-item-desc{
+  font-size: 40rpx;
+  
+}
+.group-content-item-image{
+  width: 100%;
+  height: 100%;
+  padding:0 30rpx;
+}

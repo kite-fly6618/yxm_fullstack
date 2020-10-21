@@ -1,0 +1,11 @@
+/* pages/list/list.wxss */
+page {
+  height: 150%;
+}
+.item {
+  color: red;
+  background-color: #9a9a9a;
+  font-size: 14rpx;
+  padding: 10px 20px;
+  margin-bottom: 15rpx;
+}
