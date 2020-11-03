@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        var d = 5
+        function foo(a) {
+            var b = a*2
+            function bar(c) {
+                console.log(a,b,c,d);
+            }
+            bar(b*3)
+        }
+        foo(2)
+        
+    </script> -->
+<!-- 
+    <script>
+        // eval()   欺骗词法作用域
+        function foo(str,a) {
+            eval(str)
+            console.log(a,b)
+        }
+        var b = 2;
+        foo("var b = 3",1)
+
+    </script> -->
+
+
+    <script>
+        // with 
+        var obj = {
+            a: 1,
+            b: 2,
+            c: 3
+        }
+        // obj.a = 2
+        // obj.b = 3
+        // obj.c = 4
+        // with(obj) {
+        //     a = 2
+        //     b = 3
+        //     c = 4
+        // }
+
+        function foo(obj) {
+            with(obj) {
+                a:3
+            }
+
+        }
+
+        
+
+
+    </script>
+    <!-- <script>
+
+
+        function foo(a) {
+            var b = 2
+
+            function bar() {
+                
+            }
+
+            var c = 3
+        }
+
+
+    </script> -->
+</body>
+</html>

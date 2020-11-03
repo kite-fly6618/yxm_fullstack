@@ -10,7 +10,7 @@ exports.main = async (event, context) => {
   return await db.collection('group').add({
     data: {
       name: event.groupName,
-      createBy: userInfo.openID,
+      createBy: userInfo.openId,
       createTime: new Date(),
       deleted: false,
       updateTime: new Date()
@@ -20,7 +20,7 @@ exports.main = async (event, context) => {
     return db.collection('user-group').add({
       data: {
         groupID: res._id,
-        userID: userInfo.openID,
+        userID: userInfo.openId,
         invalid: false
       }
     })

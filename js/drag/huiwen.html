@@ -1,0 +1,24 @@
+<script>
+    // 回文
+    // 上海自来水来自海上
+    var isValid = function(str) {
+        // let i = 0,j = str.length-1;
+        // while(i<j) {
+        //     if (str[i] !== str[j]) return false;
+        // }
+        // return true;
+        let i = 0,j = str.length-1;
+        while(i<j) {
+            if (!/[0-9a-zA-Z]/.test(str[i])) {
+                i ++;
+                continue;
+            } 
+            if (!/[0-9a-zA-Z]/.test(str[j])) {
+                j --;
+                continue;
+            } 
+            if (str[i].toUpperCase()!==str[j].toUpperCase()) return false;
+            }
+            return true;
+    }
+</script>
