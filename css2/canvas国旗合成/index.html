@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="file" />
+    <canvas id="preview" width="290px" height="290px"></canvas>
+    <img src="./image/flag.png" alt="" id="img" style="display: none;">
+    <!-- url/i 统一资源定位符-->
+    <!-- https://...
+         data://....
+         file://.... -->
+    <img src="" id="avatar" alt="" style="display: none;">
+    <script>
+        window.onload = function() {  //onload,等待所有资源加载完成后，执行操作
+            const file = document.getElementById('file');
+            const img = document.getElementById('img');
+            const preview = document.getElementById('preview');
+            const context = preview.getContext('2d');
+            // context.drawImage(img, 0, 0, 290, 290);
+            file.addEventListener('change', (event) => {
+                let file = event.target.files[0]
+                console.log(file);
+                if (!file.type.includes('image/')) {
+                    return;
+                }
+            const avatar = document.getElementById('avatar')
+            let fileReader = new FileReader();
+            fileReader.onload = function(e) {
+                 (fileReader.result) //代表你输入的图片
+                avatar.src = fileReader.result;
+                
+            }
+
+            avatar.onload = function() {
+                context.drawImage(avatar, 0 ,0 ,290, 290);
+                context.drawImage(img, 0, 0, 290, 290);
+            }
+
+            fileReader.readAsDataURL(file)
+
+            })
+        }
+       
+
+    </script>
+</body>
+</html>
