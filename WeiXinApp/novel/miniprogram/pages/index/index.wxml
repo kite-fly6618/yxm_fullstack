@@ -1,0 +1,10 @@
+<!--miniprogram/pages/index/index.wxml-->
+<view class="container">
+  <view class="userifo">
+  <button wx:if='{{!hasUserInfo}}' open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">点击获取头像</button>
+  <block wx:else>
+  <image class="userinfo-avatar" src="{{avatarUrl}}" mode="widthFix" ></image>
+  <text class="userInfo-nickName">{{userInfo.nickName}}</text>
+  </block>
+  </view>
+</view>
